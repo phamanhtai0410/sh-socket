@@ -1,0 +1,10 @@
+node_modules
+dump.rdb
+app/unix
+package-lock.json
+.vscode
+nginx.conf
+test
+log
+mongodb
+.env
