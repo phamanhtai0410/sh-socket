@@ -2,8 +2,8 @@ async function connect(sck) {
     function sckJoin(...roomIds) {
         return new Promise(resolve => {
             sck.join(roomIds, () => {
-                roomIds.forEach(r => rooms.add(r));
-                console.debug('Joined rooms=%j, all=%j', roomIds, Array.from(rooms));
+                // roomIds.forEach(r => rooms.add(r));
+                console.debug('Joined rooms=%j', roomIds);
                 resolve();
             });
         });
@@ -12,8 +12,8 @@ async function connect(sck) {
     function sckLeave(...roomIds) {
         return new Promise(resolve => {
             sck.leave(roomIds, () => {
-                roomIds.forEach(r => rooms.delete(r));
-                console.debug('Leaved rooms=%j, all=%j', roomIds, Array.from(rooms));
+                // roomIds.forEach(r => rooms.delete(r));
+                console.debug('Leaved rooms=%j', roomIds);
                 resolve();
             });
         });
