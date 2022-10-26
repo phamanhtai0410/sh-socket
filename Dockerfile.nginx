@@ -6,4 +6,6 @@ RUN npm install && node genNginx.js
 
 FROM nginx:1.19.2
 COPY --from=builder /app/nginx.conf /etc/nginx/conf.d/default.conf
+RUN mkdir -p /app/log/
+RUN touch /app/log/error.log
 EXPOSE 443
